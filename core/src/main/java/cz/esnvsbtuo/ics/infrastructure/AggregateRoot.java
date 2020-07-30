@@ -1,5 +1,5 @@
 package cz.esnvsbtuo.ics.infrastructure;
 
-public interface AgregateRoot {
+public interface AggregateRoot {
     Object getId();
 }

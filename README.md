@@ -1,4 +1,4 @@
-#International Community System
+# International Community System
 
 
 Project could demonstrate how Clean architecture, DDD and CQRS written in Java with 
@@ -31,7 +31,7 @@ values, and queries which return data but does not modify state.
 - Test Driven Development\
 Tests should be written first and should cover important parts of sources.
 
-###! Important
+### ! Important
 This is mainly learning project and many things is probably not optimal at the moment.
  I would be grateful for anyone giving me advices how could I do things more correctly.
  If you want to help me, feel free to contact me.
@@ -50,7 +50,7 @@ be avoided.
 
 **Persistence**
 
-Entity Gateways for Agregate roots, implements interface from business layers to 
+Entity Gateways for Aggregate roots, implements interface from business layers to 
 wherever however persist model entities.
 
 **Web**

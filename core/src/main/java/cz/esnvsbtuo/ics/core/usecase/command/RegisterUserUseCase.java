@@ -1,4 +1,4 @@
-package cz.esnvsbtuo.ics.core.application.port.usecase;
+package cz.esnvsbtuo.ics.core.usecase.command;
 
 public interface RegisterUserUseCase {
 

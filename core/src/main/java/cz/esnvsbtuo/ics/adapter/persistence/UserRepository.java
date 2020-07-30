@@ -1,6 +1,6 @@
 package cz.esnvsbtuo.ics.adapter.persistence;
 
-import cz.esnvsbtuo.ics.core.application.port.out.PersistUserPort;
+import cz.esnvsbtuo.ics.core.port.PersistUserPort;
 import cz.esnvsbtuo.ics.core.domain.Account;
 
 import java.util.HashMap;

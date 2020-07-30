@@ -1,4 +1,4 @@
-package cz.esnvsbtuo.ics.core.application.port.out;
+package cz.esnvsbtuo.ics.core.port;
 
 import cz.esnvsbtuo.ics.core.domain.Account;
 
