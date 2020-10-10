@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>core</module>
+        <module>example</module>
+        <module>events</module>
+        <module>web</module>
     </modules>
 
     <properties>

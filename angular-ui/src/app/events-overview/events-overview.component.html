@@ -1,1 +1,52 @@
-<p>events-overview works!</p>
+
+
+
+
+
+
+
+<div class="container-fluid" style="display:flex;">
+  <div class="row">
+
+
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Create event</h5>
+          <form class="card-text">
+
+            <div class="form-group row">
+              <label for="eventName" class="col-sm-2 col-form-label">Event name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="eventName">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="eventNotes" class="col-sm-2 col-form-label">Notes</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="eventNotes"></textarea>
+              </div>
+            </div>
+            <button type="button" class="btn btn-sm btn-primary">Save</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12" *ngFor="let event of events">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><a routerLink="/event/{{event.id}}">{{event.name}}</a></h5>
+          <div class="card-text">
+            <span *ngIf="event.states.length > 0">[{{event.states}}]</span>&nbsp;<span *ngIf="event.tags.length > 0">[{{event.tags}}]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+

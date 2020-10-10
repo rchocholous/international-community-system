@@ -65,3 +65,34 @@ provide HATEOAS API. Could also host webapp containing preferably React app.
 **Use case**
 
 
+
+Notes:
+-
+
+- Bounded context, Aggregates, Repositories
+- Factories and Services?
+
+usecase = interactor = control objects - application specific business rule
+
+business rules:
+a) nothing to do with automation - business is still same without computers = entities
+b) all about the automation - use case describe them, they are application specific = use cases, interactors
+
+Entities - independent business rules (even with no automations)
+
+Data in and out - boundary interface (input and output, only interactors talk with them):
+a) using relationship
+b) inherritence relationship (interfaces)
+
+
+EntityGateway - repository
+
+
+
+
+**CQS:**
+
+Method, that have no return value should have side effect. Method, that does return a value should have no side effect.
+
+**DRY**
+Don't repeat yourself

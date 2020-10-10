@@ -21,21 +21,24 @@ public class RegisterCityHandler implements RegisterCityUseCase {
 
     @Override
     public void registerCity(RegisterCityCommand command) throws InvalidCommandException {
-        City existingCity;
-        try {
-            existingCity = findCityByNamePort.findCityByName(command.cityName);
-        } catch (EntityNotFoundException e) {
-            existingCity = null;
-        }
-        if(existingCity == null) {
+        if(!validateCityNameIsUnique(command.cityName)) {
             throw new InvalidCommandException("City with this name already exist!");
         }
+
         final City newCity = this.createCity(command.cityName);
         saveCityPort.saveCity(newCity);
 
         //Todo publish CityRegisteredEvent
     }
 
+    private boolean validateCityNameIsUnique(String cityName) {
+        try {
+            findCityByNamePort.findCityByName(cityName);
+        } catch (EntityNotFoundException e) {
+            return true;
+        }
+        return false;
+    }
 
     private City createCity(String cityName) {
         final City.CityId cityId = findNextCityIdPort.findNextCityIdPort();

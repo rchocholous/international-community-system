@@ -1,1 +1,66 @@
-<p>event-detail works!</p>
+
+
+
+
+
+<div class="container-fluid" *ngIf="event">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="card-title">{{event.name}}</h4>
+    </div>
+
+    <div class="col-sm-6">
+
+      <!--<form>-->
+
+        <div class="input-group mb-3">
+          <label for="eventName" class="col-sm-2 col-form-label">Event name</label>
+          <input type="text" class="form-control" id="eventName" [(ngModel)]="event.name" placeholder="Event name" aria-label="Event name" aria-describedby="eventName">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="eventNameSave">Save</button>
+          </div>
+        </div>
+
+
+        <div class="input-group mb-3">
+          <label for="eventNotes" class="col-sm-2 col-form-label">Notes</label>
+          <textarea class="form-control" id="eventNotes" [(ngModel)]="event.notes" aria-label="With textarea"></textarea>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="eventNotesSave">Save</button>
+          </div>
+        </div>
+
+
+        <div class="input-group mb-3">
+          <label for="startDateTime" class="col-sm-2 col-form-label">Start date time</label>
+          <div class="input-group col-sm-4" style="padding:0;">
+            <input type="datetime-local" class="form-control" placeholder="2000-01-01T00:00:00" id="startDateTime" [(ngModel)]="event.startDateTime">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="startDateTimeSave">Save</button>
+            </div>
+          </div>
+
+          <label for="endDateTime" class="col-sm-2 col-form-label">End date time</label>
+          <div class="input-group col-sm-4" style="padding:0;">
+            <input type="datetime-local" class="form-control" placeholder="2000-01-01T00:00:00" id="endDateTime" [(ngModel)]="event.endDateTime">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="endDateTimeSave">Save</button>
+            </div>
+          </div>
+
+          <small id="dateTimeHelp" class="form-text text-muted" style="padding-left: 15px;">(2000-01-01T00:00:00)</small>
+        </div>
+
+      <!--</form>-->
+
+    </div>
+
+    <div class="col-sm-6">
+      {{event.name}}
+
+    </div>
+
+
+  </div>
+</div>
+
